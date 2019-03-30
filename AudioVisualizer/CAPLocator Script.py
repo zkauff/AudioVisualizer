@@ -18,7 +18,7 @@ cap = 1
 for column in range(1, HORZ_ELEMENTS + 1):
     for row in range(1, VERT_ELEMENTS + 1):
         file.write("MOVE ")
-        move = "C%d (%f %f);\n" % (cap, xpos, ypos)
+        move = "C%d (C%f %f);\n" % (cap, xpos, ypos)
         rotate = "ROTATE =R180 'C%d';\n" % (cap)
         file.write(move)
         file.write(rotate)
